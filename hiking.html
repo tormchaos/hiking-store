@@ -4,127 +4,650 @@
         <meta charset="UTF-8">  
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="esimene lause browseri descriptionis">
-        <title>Hiking Store</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Yantramanav:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./vendors/fontawesome/css/all.min.css">
+        <link rel="icon" type="image/x-icon" href="./hiking-images/mountain-sun-solid-full.svg"> <!--favicon-->
         <link rel="stylesheet" href="./hiking-style.css">
+        <title>Hiking Store</title>
     </head>
     <body>
      <!--page header + nav starts here-->
         <header>
         
             <!--nav bar-->
-            <nav>
+            <div class="nav__background">
                 <div class="container">
-                    <div class="row">
-                        <p>Inspiro</p>
-                        <div class="nav-bar">
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Activities</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Shop</a>
+                    <div class="row header__row">
+                        <!--<nav class="nav">-->
+                            <div class="column header__column">
+                                <a href="https://demo.wpzoom.com/inspiro-shop/" class="nav__logo"><h3>Inspiro</h3></a>
+                            </div>
+                            <div class="column header__column">
+                                <div class="nav__list visible-on-desktop">
                                     <ul>
-                                        <li><a href="#">Hiking pants</a></li>
-                                        <li><a href="#">Climbing equipment</a></li>
-                                        <li><a href="#">Tents</a></li>
-                                        <li><a href="#">Backpacks</a></li>
-                                        <li><a href="#">Hiking boots</a></li>
-                                        <li><a href="#">Jackets</a></li>
+                                        <li><a href="#" class="nav__element">Home</a></li> 
+                                        <li><a href="#" class="nav__element">Activities</a></li>
+                                        <li><a href="#" class="nav__element">Blog</a></li>
+                                        <li class="nav__hasdropdown"><a href="#" class="nav__element">Shop</a>
+                                            <ul class="nav__dropdown">
+                                                <li><a href="#" class="nav__element">Hiking pants</a></li>
+                                                <li><a href="#" class="nav__element">Climbing equipment</a></li>
+                                                <li><a href="#" class="nav__element">Tents</a></li>
+                                                <li><a href="#" class="nav__element">Backpacks</a></li>
+                                                <li><a href="#" class="nav__element">Hiking boots</a></li>
+                                                <li><a href="#" class="nav__element">Jackets</a></li>
+                                            </ul>
+                                        </li> 
+                                        <li><a href="#" class="nav__element">About</a></li>
+                                        <li><a href="#" class="nav__element">Contact</a></li>
+                                    </ul> 
+                                </div>
+                            </div>
+                            <div class="column header__column">
+                                <div class="nav__list">
+                                    <ul>
+                                        <li><a href="#" class="nav__element"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                                        <li><a href="#" class="nav__element"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                        <li><a href="#" class="nav__element"><i class="fa-solid fa-bars"></i></a></li>
                                     </ul>
-                                </li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                        <div class="nav-symbols">
-                            <p>search</p>
-                            <p>shopping cart</p>
-                            <p>menu dropdown</p>
-                        </div>
+                                </div>
+                            </div>
+                        <!--</nav>-->
                     </div>
                 </div>
-            </nav>
+            </div>
         </header>
 
     <!--main content starts here-->
         <main>
-            <!--main scrollable image and covering text-->
-            <div class="container">
-                <div class="header-scroll">
-                    <img src="./hiking-images/main-hiking-header.jpeg" alt="Man hiking uphill on a grassy path">
-                    <div class="overlay"></div>
-                    <h1>Gear up for unforgettable outdoor adventures</h1>
-                    <p>Embark on your next outdoor experience with our handpicked assortment of must-have hiking gear</p>
-                    <button><a href="#">Shop now</a></button>
+
+            <!--main banner-again-using background image-->
+           <section class="banner banner--main">
+                <div class="container">
+                    <h1 class="banner__heading">Gear up for unforgettable outdoor adventures</h1>
+                    <p class="banner__text">Embark on your next outdoor experience with our handpicked assortment of must-have hiking gear</p>
+                    <a href="#" class="button banner__button">Shop now</a>
+                    <a href="#" class="arrow arrow--left"><i class="fa-solid fa-chevron-left"></i></a>
+                    <a href="#" class="arrow arrow--right"><i class="fa-solid fa-chevron-right"></i></a>
                 </div>
-            </div>
+           </section>
 
             <!--three images-->
             <div class="container">
-                <div class="first-main">
-                    <img src="./hiking-images/hiking-equipment.jpeg" alt="Woman carrying a hiking backback and walking down a grassy path">
-                </div>
-            </div>
+                <section>
+                    <div class="row row--threecolumns">
+                        <div class="column">
+                            <div class="textover">
+                                <img class="textover__img" src="./hiking-images/hiking-equipment.jpeg" alt="A woman walking along a grassy path, wearing a yellow backpack">
+                                <div class="textover__flexcontainer">
+                                    <h3 class="textover__heading">Essential hiking equipment for your next trek</h3>
+                                    <a href="#" class="button textover__button">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="textover">
+                                <img class="textover__img" src="./hiking-images/camping.jpg" alt="A green and a yellow tent in a forest with campers and a campfire">
+                                <div class="textover__flexcontainer">
+                                    <h3 class="textover__heading">Enhance your camping outdoor experience</h3>
+                                    <a href="#" class="button textover__button">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="textover">
+                                <img class="textover__img" src="./hiking-images/climbing.jpg" alt="A woman climbing on a rocky mountainwall">
+                                <div class="textover__flexcontainer">
+                                    <h3 class="textover__heading">Climbing essentials to conquer any ascent</h3>
+                                    <a href="#" class="button textover__button">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-            <!--new arrivals-->
-            <div class="container">
-                <div class="header-scroll">
-                    
-                </div>
+                <!--new arrivals-->
+                <section class="product">
+                    <header>
+                        <span class="stripe stripe--short"></span>
+                        <h2 class="product__header header--centeronmobile">New arrivals</h2>
+                    </header>
+
+                    <!--first row of products-->
+                    <div class="row product__row">
+                        <div class="column">
+                            <div class="product__container">
+                                <a class="product__link" href="#">
+                                    <img class="product__img" src="./hiking-images/trail-pants.jpg" alt="Fjällräven High Coast Trail Regular Women's moss-green hiking pants">
+                                    <h4 class="product__name">Fjällräven High Coast Trail Regular Pants Women</h4>
+                                    <h5 class="product__price">$130.00</h5>
+                                </a>
+                                <a href="#" class="button product__button">Add to cart<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="product__container">
+                                <a class="product__link" href="#">
+                                    <img class="product__img" src="./hiking-images/climing-boots.jpg" alt="La Sportiva Solution Women's Climbing Shoe in a white, black, orange colorway, isolated on a white background">
+                                    <h4 class="product__name">La Sportiva Solution Women's Climbing Shoe</h4>
+                                    <h5 class="product__price">$29.00 - $48.00</h5>
+                                </a>
+                                <a href="#" class="button product__button">Select options<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="product__container">
+                                <a class="product__link" href="#">
+                                    <img class="product__img" src="./hiking-images/backpack-green.png" alt="The North Face Trail Lite 50 Hiking Backpack with green bottom and black top part">
+                                    <h4 class="product__name">The North Face Trail Lite 50 Backpack</h4>
+                                    <h5 class="product__price">$29.00 - $48.00</h5>
+                                </a>
+                                <a href="#" class="button product__button">Select options<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="product__container">
+                                <a class="product__link" href="#">
+                                    <img class="product__img" src="./hiking-images/backpack-lightblue.png" alt="deuter Aircontact Core 55+10 SL Ladies Hiking Backpack in a lightblue colorway">
+                                    <h4 class="product__name">deuter Aircontact Core 55+10 SL Ladies Backpack</h4>
+                                    <h5 class="product__price">$140.00</h5>
+                                </a>
+                                <a href="#" class="button product__button">Add to cart<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--second row of products-->
+                    <div class="row product__row">
+                        <div class="column">
+                            <div class="product__container">
+                                <a class="product__link" href="#">
+                                    <img class="product__img" src="./hiking-images/backpack-red.png" alt="Lowe Alpine Airzone Trek ND43:50 red Women's Hiking Backpack">
+                                    <h4 class="product__name">Lowe Alpine Airzone Trek ND43:50 Backpack Women</h4>
+                                    <h5 class="product__price">$29.00 - $48.00</h5>
+                                </a>
+                                <a href="#" class="button product__button">Add to cart<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="product__container">
+                                <a class="product__link" href="#">
+                                    <img class="product__img" src="./hiking-images/jackets-mens-cargo.jpg" alt="Fjällräven Skogsö Men's Jacket in a desert colorway">
+                                    <h4 class="product__name">Fjällräven Skogsö Men's Desert Jacket</h4>
+                                    <h5 class="product__price">$129.00</h5>
+                                </a>
+                                <a href="#" class="button product__button">Select options<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="product__container">
+                                <a class="product__link" href="#">
+                                    <img class="product__img" src="./hiking-images/jackets-red.jpg" alt="The North Face Men's Lightning Jacket with red top-part, black bottom-part and red zipper">
+                                    <h4 class="product__name">The North Face M Lightning Jacket</h4>
+                                    <h5 class="product__price">$99.00</h5>
+                                </a>
+                                <a href="#" class="button product__button">Select options<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="product__container">
+                                <a class="product__link" href="#">
+                                    <img class="product__img" src="./hiking-images/jackets-lightgreen.png" alt="Ayacucho Annapurna Softshell Women's Hoody in a lightgreen color">
+                                    <h4 class="product__name">Ayacucho Annapurna Softshell Hoody Women</h4>
+                                    <h5 class="product__price">$184.00</h5>
+                                </a>
+                                <a href="#" class="button product__button">Add to cart<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
 
             <!--shop by activities-->
-            <div class="container">
-                <div class="header-scroll">
-                    
-                </div>
-            </div>
+            <section class="activity">
+                <div class="container">
+                    <header class="activity__header">
+                        <span class="stripe stripe--short"></span>
+                        <h2 class="activity__header header--centeronmobile">Shop by activity</h2>
+                    </header>
 
+                    <!--first row of activities-->
+                    <div class="row activity__row row--threecolumns">
+                        <div class="column">
+                            <div class="activity__container">
+                                <a class="activity__link" href="#">
+                                    <img class="activity__img" src="./hiking-images/running.jpg" alt="A woman running on asphalt along a body of water, picture has motion blur.">
+                                    <h3 class="activity__name">Running</h3>
+                                </a>
+                                <a href="#" class="button activity__button">Shop now<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="activity__container">
+                                <a class="activity__link" href="#">
+                                    <img class="activity__img" src="./hiking-images/hiking-hiking.jpg" alt="A man in hiking gear overlooking a lake between mountains.">
+                                    <h3 class="activity__name">Hiking</h3>
+                                </a>
+                                <a href="#" class="button activity__button">Shop now<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="activity__container">
+                                <a class="activity__link" href="#">
+                                    <img class="activity__img" src="./hiking-images/climbing.jpg" alt="A woman climbing on a rocky mountainwall.">
+                                    <h3 class="activity__name">Climbing</h3>
+                                </a>
+                                <a href="#" class="button activity__button">Shop now<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--second row of activities-->
+                    <div class="row activity__row row--threecolumns">
+                        <div class="column">
+                            <div class="activity__container">
+                                <a class="activity__link" href="#">
+                                    <img class="activity__img" src="./hiking-images/cycling.jpg" alt="A cyclist riding down an asphalt road between beautiful green and rocky mountains">
+                                    <h3 class="activity__name">Cycling</h3>
+                                </a>
+                                <a href="#" class="button activity__button">Shop now<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="activity__container">
+                                <a class="activity__link" href="#">
+                                    <img class="activity__img" src="./hiking-images/camping.jpg" alt="A green and a yellow tent in a forest with campers and a campfire">
+                                    <h3 class="activity__name">Camping</h3>
+                                </a>
+                                <a href="#" class="button activity__button">Shop now<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="activity__container">
+                                <a class="activity__link" href="#">
+                                    <img class="activity__img" src="./hiking-images/swimming.jpg" alt="A man in swimming trunks getting ready to jump into a blue swimming pool">
+                                    <h3 class="activity__name">Swimming</h3>
+                                </a>
+                                <a href="#" class="button activity__button">Shop now<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row activity__row">
+                        <div class="activity__centerbutton">
+                            <a href="#" class="button activity__button__centerbutton">View all products</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
             <!--discount section-->
-            <div class="container">
-                <div class="header-scroll">
+            <section class="sale">
+                <div class="container">
+                    <div class="row sale__row">
                     
-                </div>
-            </div>
+                        <!--first row of sale-->
+                        <div class="column">
+                            <div class="sale__container">
+                                <img class="sale__img" src="./hiking-images/hiking-equipment.jpeg" alt="A woman walking along a grassy path, wearing a yellow backpack">
+                                <div class="sale__flexcontainer">
+                                    <h3 class="sale__heading">Hiking equipment</h3>
+                                    <h3 class="sale__percentage">-25%</h3>
+                                    <a href="#" class="button sale__button">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="product__container product__container__small">
+                                <a class="product__link" href="#">
+                                    <img class="product__img" src="./hiking-images/trail-pants.jpg" alt="Fjällräven High Coast Trail Regular Women's moss-green hiking pants">
+                                    <h4 class="product__name">Fjällräven High Coast Trail Regular Pants Women</h4>
+                                    <h5 class="product__price">$130.00</h5>
+                                </a>
+                                <a href="#" class="button product__button">Add to cart<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="product__container__small">
+                                <a class="product__link" href="#">
+                                    <img class="product__img" src="./hiking-images/men-brown-hiking-pants.png" alt="The North Face Men's Lightning Pant Regular Brown Hiking Pants">
+                                    <h4 class="product__name">The North Face M Lightning Pant Regular</h4>
+                                    <h5 class="product__price">$29.00 - $48.00</h5>
+                                </a>
+                                <a href="#" class="button product__button">Add to cart<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="product__container product__container__small">
+                                <a class="product__link" href="#">
+                                    <img class="product__img" src="./hiking-images/men-trail-pants.png" alt="Fjällräven Karl Pro Hydratic Brown Hiking WorkPants">
+                                    <h4 class="product__name">Fjällräven Karl Pro Brown Hydratic Hiking Pants</h4>
+                                    <h5 class="product__price">$130.00</h5>
+                                </a>
+                                <a href="#" class="button product__button">Add to cart<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="product__container__small">
+                                <a class="product__link" href="#">
+                                    <img class="product__img" src="./hiking-images/women's-blue-forest-hiking-pants.jpg" alt="Ayacucho Forest Softshell Zip-Off Pants in navy blue">
+                                    <h4 class="product__name">Ayacucho Forest Softshell Zip-Off Zip-Off Pants</h4>
+                                    <h5 class="product__price">$29.00 - $48.00</h5>
+                                </a>
+                                <a href="#" class="button product__button">Add to cart<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
 
-            <!--auto-scroll image section-->
-            <div class="container">
-                <div class="header-scroll">
-                    
+                        <!--second row of sale-->
+                        <div class="column">
+                            <div class="product__container product__container__small">
+                                <a class="product__link" href="#">
+                                    <img class="product__img" src="./hiking-images/climing-boots.jpg" alt="La Sportiva Solution Women's Climbing Shoe in a white, black, orange colorway, isolated on a white background">
+                                    <h4 class="product__name">La Sportiva Solution Women's Climbing Shoe</h4>
+                                    <h5 class="product__price">$130.00</h5>
+                                </a>
+                                <a href="#" class="button product__button">Add to cart<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="product__container__small">
+                                <a class="product__link" href="#">
+                                    <img class="product__img" src="./hiking-images/blue-rope.jpg" alt="Mammut 9.8 Crag Classic Rope 60 M in lightblue-orange color combination">
+                                    <h4 class="product__name">Mammut 9.8 Crag Classic Rope 60 </h4>
+                                    <h5 class="product__price">$29.00 - $48.00</h5>
+                                </a>
+                                <a href="#" class="button product__button">Add to cart<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="product__container product__container__small">
+                                <a class="product__link" href="#">
+                                    <img class="product__img" src="./hiking-images/hiking-climbing-harness.jpg" alt="Black Diamond Momentum Climbing Harness in blue and green colorway">
+                                    <h4 class="product__name">Black Diamond Momentum Climbing Harness</h4>
+                                    <h5 class="product__price">$130.00</h5>
+                                </a>
+                                <a href="#" class="button product__button">Add to cart<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="product__container__small">
+                                <a class="product__link" href="#">
+                                    <img class="product__img" src="./hiking-images/gear.png" alt="Mammut Classic HMS Twistlock Plus Carabiner attached to orange rope">
+                                    <h4 class="product__name">Mammut Classic HMS Twistlock Plus Carabiner</h4>
+                                    <h5 class="product__price">$29.00 - $48.00</h5>
+                                </a>
+                                <a href="#" class="button product__button">Add to cart<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="sale__container">
+                                <img class="sale__img" src="./hiking-images/climbing.jpg" alt="A woman climbing on a rocky mountainwall">
+                                <div class="sale__flexcontainer">
+                                    <h3 class="sale__heading">Climbing gear</h3>
+                                    <h3 class="sale__percentage">-35%</h3>
+                                    <a href="#" class="button sale__button">Take a look</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <!--auto-scroll tent image banner section-->
+           <section class="banner banner--second">
+                <div class="container">
+                    <span class="stripe stripe--long"></span>
+                    <h2 class="banner__smallheading">Find your new tent</h2>
+                    <a href="#" class="button banner__button">Shop now</a>
+                </div>
+           </section>
 
             <!--shopping experience explanation section-->
-            <div class="container">
-                <div class="header-scroll">
-                    
+            <section class="experience">
+                <div class="container">
+
+                    <!--first row of shopping experience explanation-->
+                    <div class="row experience__row row--threecolumns">
+                        <div class="column experience__main">
+                            <div class="experience__container">
+                                <span class="stripe stripe--short"></span>
+                                <h2 class="experience__header header--centeronmobile">Seamless shopping experience tailored just for you</h2>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="experience__container experience__container__long">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <path d="M0 9V12H28.5V34.5H19.266C18.597 31.9215 16.278 30 13.5 30C10.722 30 8.403 31.9215 7.734 34.5H6V27H3V37.5H7.734C8.403 40.0785 10.722 42 13.5 42C16.278 42 18.597 40.0785 19.266 37.5H31.734C32.403 40.0785 34.722 42 37.5 42C40.278 42 42.597 40.0785 43.266 37.5H48V25.266L47.9055 25.0305L44.9055 16.0305L44.58 15H31.5V9H0ZM1.5 15V18H15V15H1.5ZM31.5 18H42.4215L45 25.6875V34.5H43.266C42.597 31.9215 40.278 30 37.5 30C34.722 30 32.403 31.9215 31.734 34.5H31.5V18ZM3 21V24H12V21H3ZM13.5 33C15.1755 33 16.5 34.3245 16.5 36C16.5 37.6755 15.1755 39 13.5 39C11.8245 39 10.5 37.6755 10.5 36C10.5 34.3245 11.8245 33 13.5 33ZM37.5 33C39.1755 33 40.5 34.3245 40.5 36C40.5 37.6755 39.1755 39 37.5 39C35.8245 39 34.5 37.6755 34.5 36C34.5 34.3245 35.8245 33 37.5 33Z" fill="#212121">
+                                    </path>
+                                </svg>
+                                <h4 class="experience__smallheader">Free shipping & returns</h4>
+                                <p class="experience__text">Enjoy the convenience of Free Shipping & Returns, making your online shopping experience seamless and worry-free.</p>
+                                <a href="#" class="button experience__button arrow__noborder__button">Learn more<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="experience__container experience__container__long">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <path d="M25.5002 6V7.785C24.4186 8.17823 23.5231 8.96146 22.9892 9.981C22.5248 10.8793 22.3849 11.9104 22.5932 12.9C22.8417 14.0505 23.5226 15.0616 24.4952 15.7245C25.2152 16.212 26.0777 16.5 27.0002 16.5C27.2132 16.5 27.4142 16.5405 27.5942 16.614C27.7724 16.6865 27.9343 16.7939 28.0703 16.9299C28.2063 17.066 28.3137 17.2278 28.3862 17.406C28.4597 17.586 28.5002 17.787 28.5002 18C28.5067 18.2955 28.4237 18.586 28.262 18.8334C28.1003 19.0808 27.8675 19.2734 27.5942 19.386C27.4142 19.4595 27.2132 19.5 27.0002 19.5C26.7872 19.5 26.5862 19.4595 26.4062 19.386C26.228 19.3135 26.0662 19.2061 25.9301 19.0701C25.7941 18.934 25.6867 18.7722 25.6142 18.594C25.538 18.4053 25.4992 18.2035 25.5002 18H22.5002C22.5004 19.1671 22.9625 20.2867 23.7857 21.114C24.2674 21.6053 24.8533 21.9821 25.5002 22.2165V24H28.5002V22.215C30.2402 21.585 31.5002 19.935 31.5002 18C31.5002 15.8475 29.9387 14.0175 27.9002 13.593C27.6042 13.5312 27.3026 13.5001 27.0002 13.5C26.7872 13.5 26.5862 13.4595 26.4062 13.386C26.228 13.3136 26.0661 13.2062 25.93 13.0702C25.794 12.9341 25.6866 12.7722 25.6142 12.594C25.538 12.4053 25.4992 12.2035 25.5002 12C25.5002 11.7855 25.5407 11.586 25.6142 11.406C25.6869 11.228 25.7945 11.0663 25.9307 10.9305C26.0716 10.7915 26.2387 10.6818 26.4223 10.6079C26.6059 10.534 26.8023 10.4973 27.0002 10.5C27.8552 10.5 28.5002 11.145 28.5002 12H31.5002C31.5006 11.5291 31.4256 11.0612 31.2782 10.614C31.0574 9.96406 30.693 9.37223 30.2121 8.88246C29.7311 8.3927 29.146 8.01759 28.5002 7.785V6H25.5002ZM15.7742 27C14.8513 27.0019 13.9334 27.1362 13.0487 27.399L13.0187 27.4095L4.51221 30.6735L7.48821 39.0285L14.8832 36.1935L25.5887 42.0885L44.0747 34.4295L42.9257 31.6635L25.7702 38.766L15.1172 32.901L9.28221 35.133L8.32071 32.4255L14.0162 30.24C14.0297 30.234 14.7302 30 15.7742 30C16.8287 30 18.0572 30.234 19.1072 31.185L19.1282 31.1955L19.1342 31.2015C20.6792 32.544 21.8462 33.4815 23.4692 33.9915C25.0922 34.5015 26.9342 34.5585 30.0092 34.5465L29.9942 31.5465C26.9762 31.5585 25.3997 31.452 24.3692 31.125C23.3372 30.8085 22.6052 30.24 21.1172 28.95L21.0992 28.9395C19.3637 27.381 17.3027 26.994 15.7742 27Z" fill="#212121">
+                                    </path>
+                                </svg>
+                                <h4 class="experience__smallheader">Money Back Guarantee</h4>
+                                <p class="experience__text">Shop with complete confidence knowing that our web store offers a 100% Money Back Guarantee.</p>
+                                <a href="#" class="button experience__button arrow__noborder__button">Learn more<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--second row of shopping experience explanation-->
+                    <div class="row experience__row experience__row__second row--threecolumns">
+                        <div class="column experience__columnstart2">
+                            <div class="experience__container experience__container__long">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <path d="M40.5 6C27.2955 6 20.6985 13.1925 17.529 16.65L12.954 21.264C11.6961 22.5141 10.6988 24.0014 10.02 25.6398C9.3413 27.2782 8.99459 29.0351 9 30.8085V33L12.0405 29.9595C12.2327 27.4773 13.3076 25.146 15.0705 23.388L19.74 18.678C22.494 15.6735 28.0935 9.567 38.9625 9.0345C38.6295 15.8175 36.1275 20.5455 33.5655 23.8125L28.5 25.5H32.127C31.2332 26.461 30.2973 27.3819 29.322 28.26L27.852 29.715L22.5 31.5H26.0505L24.615 32.9205C23.6424 33.8989 22.4853 34.6746 21.2108 35.2027C19.9362 35.7308 18.5696 36.0008 17.19 35.997H14.1255L28.062 22.0605L25.941 19.9395L6 39.879L8.121 42L11.124 38.997H17.1915C18.9662 39.0017 20.7243 38.6541 22.3637 37.9743C24.0031 37.2945 25.4913 36.2961 26.742 35.037L31.347 30.468C34.8045 27.3045 42 20.7075 42 7.5V6H40.5Z" fill="#212121">
+                                    </path>
+                                </svg>
+                                <h4 class="experience__smallheader">High-Quality Material</h4>
+                                <p class="experience__text">Indulge in our exquisite collection crafted from high-quality materials, ensuring exceptional durability, comfort, and style.</p>
+                                <a href="#" class="button experience__button arrow__noborder__button">Learn more<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="experience__container experience__container__long">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <path d="M9 4.5V43.5H39V14.4L38.55 13.95L29.55 4.95L29.1 4.5H9ZM12 7.5H27V16.5H36V40.5H12V7.5ZM30 9.6L33.9 13.5H30V9.6ZM15 19.5V22.5H33V19.5H15ZM20.25 24C18.9 24 17.85 24.9 17.25 25.95C16.65 27 16.5 28.35 16.5 29.85C16.5 30.75 16.8 31.65 16.95 32.55C16.35 32.7 15.75 33.15 15 33.15V36.15C16.05 36.15 17.1 36 18 35.7C18.15 36 18.15 36.15 18.45 36.45C19.05 37.05 19.95 37.5 21 37.5C23.4 37.5 24.9 35.85 25.95 34.65C26.1 34.35 26.25 34.2 26.4 34.05C26.4 34.2 26.4 34.35 26.55 34.5C26.7 34.8 26.85 35.1 27.15 35.4C27.45 35.7 28.05 36 28.5 36C29.4 36 30 35.4 30.3 35.1C30.6 34.8 30.9 34.35 31.2 34.05C31.8 33.45 32.25 33 32.85 33V30C31.05 30 29.7 31.05 28.95 31.95C28.95 31.8 28.95 31.65 28.8 31.5C28.65 31.2 28.5 30.9 28.2 30.45C27.9 30 27.45 30 27 30C25.8 30 25.35 30.75 24.9 31.2C24.45 31.65 24 32.25 23.7 32.85C22.8 33.9 22.2 34.5 21 34.5C20.85 34.5 20.85 34.35 20.7 34.35C20.85 34.35 20.85 34.2 21 34.2C22.65 32.85 24 31.05 24 28.65C24 27.45 23.7 26.4 23.1 25.5C22.5 24.6 21.45 24 20.25 24ZM20.1 27C20.55 27 20.55 27 20.7 27.3C20.85 27.6 21 28.05 21 28.8C21 29.7 20.55 30.6 19.8 31.35C19.8 30.9 19.5 30.3 19.5 30C19.5 28.8 19.65 27.9 19.95 27.45C20.1 27.15 20.1 27 20.1 27Z" fill="#212121">
+                                    </path>
+                                </svg>
+                                <h4 class="experience__smallheader">Safe and Secure Checkout</h4>
+                                <p class="experience__text">Shop with peace of mind, as our web store provides a safe and secure checkout process. Comfortability, speed and security.</p>
+                                <a href="#" class="button experience__button arrow__noborder__button">Learn more<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
+            </section>
 
             <!--shop by categories section-->
-            <div class="container">
-                <div class="header-scroll">
-                    
+            <section class="categories">
+                <div class="container">
+                    <header class="categories__header">
+                            <span class="stripe stripe--short"></span>
+                            <h2 class="categories__heading header--centeronmobile">Shop by categories</h2>
+                    </header>
+                    <div class="row categories__row">
+                        <div class="column">
+                            <div class="categories__container">
+                                <a class="categories__link" href="#">
+                                    <img class="categories__img" src="./hiking-images/backpack.png" alt="A darkblue quality hiking backpack">
+                                    <h3 class="categories__name">Backpacks</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="categories__container">
+                                <a class="categories__link" href="#">
+                                    <img class="categories__img" src="./hiking-images/boots.png" alt="Adidas mid-top hiking boots with lightblue, black and white colorway">
+                                    <h3 class="categories__name">Hiking boots</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="categories__container">
+                                <a class="categories__link" href="#">
+                                    <img class="categories__img" src="./hiking-images/men-trail-pants.png" alt="Fjällräven Karl Pro Hydratic Brown Hiking WorkPants">
+                                    <h3 class="categories__name">Hiking pants</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="categories__container">
+                                <a class="categories__link" href="#">
+                                    <img class="categories__img" src="./hiking-images/gear.png" alt="Mammut Classic HMS Twistlock Plus Carabiner attached to orange rope">
+                                    <h3 class="categories__name">Climbing equipment</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="categories__container">
+                                <a class="categories__link" href="#">
+                                    <img class="categories__img" src="./hiking-images/jackets.png" alt="Ayacucho Annapurna Softshell Women's Hoody in a lightgreen color">
+                                    <h3 class="categories__name">Jackets</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="categories__container">
+                                <a class="categories__link" href="#">
+                                    <img class="categories__img" src="./hiking-images/tent.png" alt="Beautiful white hiking tent">
+                                    <h3 class="categories__name">Tents</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+            
 
             <!--blog section-->
-            <div class="container">
-                <div class="header-scroll">
-                    
+            <section class="blog">
+                <div class="container">
+                    <header class="blog__header">
+                        <span class="stripe stripe--short"></span>
+                        <h2 class="blog__heading header--centeronmobile">Our blog</h2>
+                    </header>
+                    <div class="row blog__row">
+                        <div class="column blog__column__big">
+                            <div class="blog__container blog__container__big">
+                                <a class="blog__link" href="#">
+                                    <img class="blog__img" src="./hiking-images/main-hiking-header.jpeg" alt="Two hikers walking along a grassy path towards a snowy mountain">
+                                    <h3 class="blog__name">10 Essential Outdoor Gear and Clothing Items for Your Next Adventure</h3>
+                                </a>
+                                <p class="blog__text">This is some dummy copy. You're not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual…</p>
+                                <a href="#" class="button  arrow__noborder__button">Read more<i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="blog__container blog__container__small">
+                                <a class="blog__link" href="#">
+                                    <img class="blog__img" src="./hiking-images/blue-mountain.jpg" alt="A man in hiking gear overlooking a lake between mountains">
+                                    <h3 class="blog__name blog__name__small">The Ultimate Guide to Choosing the Perfect Backpack for Outdoor Adventures</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="blog__container blog__container__small">
+                                <a class="blog__link" href="#">
+                                    <img class="blog__img" src="./hiking-images/hiking-together.jpg" alt="A man standing on top of a mountain, mountains can be seen on the background">
+                                    <h3 class="blog__name blog__name__small">Our Team's 5 Favorite Hiking Destinations in Europe</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="blog__container blog__container__small">
+                                <a class="blog__link" href="#">
+                                    <img class="blog__img" src="./hiking-images/mountainview.jpg" alt="Four friends on a mountaintop, snowy mountains can be seen on the background">
+                                    <h3 class="blog__name blog__name__small">8 Things you should consider before heading out on your next adventure</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="blog__container blog__container__small">
+                                <a class="blog__link" href="#">
+                                    <img class="blog__img" src="./hiking-images/hiking-equipment.jpeg" alt="A woman walking along a grassy path, wearing a yellow backpack">
+                                    <h3 class="blog__name blog__name__small">Discover the Latest Trends in Outdoor Gear and Clothing</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="activity__centerbutton">
+                            <a href="#" class="button activity__button__centerbutton blog__button">View all</a>
+                    </div>
                 </div>
-            </div>
+            </section>
+
 
             <!--newsletter section-->
-            <div class="container">
-                <div class="header-scroll">
-                    
+           <section class="banner banner--newsletter">
+                <div class="container">
+                    <span class="stripe stripe--long"></span>
+                    <h2 class="banner__smallheading">Join our newsletter for €20 off</h2>
+                    <p>We'll email you a voucher worth €20 off your first order over €100.</p>
+                    <form action="#" method="post" class="form">
+                        <input class="button newsletter__input" name="mail" required="" type="text" placeholder="Email address">
+                        <input class="button newsletter__button" type="submit" value="Subscribe">
+                    </form>
+                    <p class="newsletter__undertext">By subscribing you agree to our <a href="#" class="newsletter__link">Terms & Conditions</a> and <a href="#" class="newsletter__link">Privacy & Cookies Policy</a>.</p>
                 </div>
-            </div>
+           </section>
+
         </main>
 
     <!--footer starts here-->
         <footer>
-
+            <div class="container">
+                <div class="row footer__row row--threecolumns">
+                    <div class="column">
+                        <div class="footer__container">
+                            <h3>About us</h3>
+                            <p>This is some dummy copy. You're not really supposed to read this dummy copy, it is just a place holder for people who need some type to visualize.</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="footer__container">
+                            <h3>Our address</h3>
+                            <p>146 W 29th St,<br>New York,<br>NY 10011<br><a href="#" class="footer__link">Contact us</a></p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="footer__container">
+                            <h3>Follow us</h3>
+                            <p>Stay in touch with us:</p>
+                            <div class="footer__iconcontainer">
+                                <a href="#" class="footer__icon"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="footer__icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="footer__icon"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="#" class="footer__icon"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" class="footer__icon"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row footer__row footer__row--second row--threecolumns">
+                    <div class="column">
+                        <div class="footer__container">
+                            <p>Copyright © 2025 - Inspiro. All Rights Reserved</p>
+                        </div>
+                    </div>
+                    <div class="column footer__columnspan">
+                        <div class="footer__container">
+                            <p>Design copied for training purposes by TORMCHAOS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
     </body>
 </html>
