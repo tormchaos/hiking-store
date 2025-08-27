@@ -5,6 +5,23 @@
 body{
     font-family: "Yantramanav", sans-serif;
 }
+body::before{
+    content: "";
+    transition: 0.5s;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1;
+    pointer-events: none;
+}
+body.sidebarshown::before{ /*if sidebar is open, whole body gets overlay*/
+    background-color: black;
+    opacity: 0.7;
+    pointer-events: auto;
+}
 h1,
 h2,
 h3{
@@ -80,9 +97,13 @@ a{
 .nav__background{
     width: 100%;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: transparent;
     z-index: 10;
     color: #fff;
+    transition: background-color 0.3s ease;
+}
+.nav__background.scrolled{
+    background-color: rgba(0, 0, 0, 0.9);
 }
 .header__row{
     padding: 0;
@@ -94,6 +115,12 @@ a{
 .header__column{
     margin-top: 30px;
     margin-bottom: 20px;
+}
+.header__column.first{
+    justify-self: start;
+}
+.header__column.last{
+    justify-self: end;
 }
 .nav__logo{
     text-transform: uppercase;
@@ -118,9 +145,19 @@ a{
     transition: all 1.5s ease;
     position: absolute;
     z-index: 3;
-    top: 100%;
+    top: 37px;
     height: 0;
     overflow: hidden;
+    text-align: center;
+    left: -100%;
+    max-width: 480px;
+    width: 300%;
+}
+.nav__dropdown a{
+    color: #b0b0b0;
+}
+.nav__hasdropdown{
+    position: relative;
 }
 .nav__hasdropdown>a{
     position: relative;
@@ -139,6 +176,63 @@ a{
     opacity: 1;
     height: auto;
     overflow: visible;
+}
+.nav__hasdropdown ul li{
+    color: #78787f;
+    display: block;
+    padding: 15px 40px;
+    border-top: 0.5px solid #434343;
+}
+.nav__hasdropdown ul li:first-child{
+    border-top: 3px solid #eba12d;
+}
+
+/* sidebar */
+.mobile-nav__sidebar {
+    color: #78787f;
+    background-color: #101010;
+    position: fixed;
+    z-index: 13;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* min-width: 20%; */
+    max-width: 380px;
+    width: 100%;
+    transform: translateX(100%);
+    font-size: 16px;
+    padding: 30px;
+}
+.mobile-nav__sidebaractive{
+    transform: translateX(0);
+    transition: 0.5s;
+}
+.menu--vertical ul li{
+    display: block;
+    padding: 10px;
+}
+.menu__element ul li{
+    display: block;
+    padding: 5px 0;
+    color: #eba12d;
+}
+.menu__dropdown a{
+    color: #eba12d;
+}
+.menu__element h4{
+    font-family: "Fjalla One", sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.mobile-nav__closebtn{
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    position: absolute;
+    right: 45px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 /* main banner section */
@@ -610,6 +704,32 @@ footer p{
     margin-right: 10px;
 }
 
+/* upbtn button */
+.upbtn{
+    padding: 12px;
+    background-color: #111111;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: inline-block;
+    z-index: 9;
+    cursor: pointer;
+    display: none;
+    opacity: 0.9;
+}
+/* if i don't use font-awesome i can use the one below */
+/*
+.upbtn__chevron{
+    width: 15px;
+    display: block;
+    height: 15px;
+    border-top: 4px solid #fff;
+    border-right: 4px solid #fff;
+    transform: rotate(315deg);
+}
+*/
+
 /* responsiveness through media queries*/
 @media screen and (min-width: 520px){
     .categories__row{
@@ -669,9 +789,6 @@ footer p{
 }
 
 @media screen and (min-width: 820px){
-    .visible-on-desktop{
-        display: block;
-    }
     .row--threecolumns{
         grid-template-columns: repeat(3, 1fr);
         /* justify-items: stretch; why does the cover background stretch together with it???*/
@@ -708,6 +825,9 @@ footer p{
 }
 
 @media screen and (min-width: 980px){
+    .visible-on-desktop{
+        display: block;
+    }
     .categories__row{
         grid-template-columns: repeat(6, 1fr);
     }

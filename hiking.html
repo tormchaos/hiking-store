@@ -21,10 +21,10 @@
                 <div class="container">
                     <div class="row header__row">
                         <!--<nav class="nav">-->
-                            <div class="column header__column">
+                            <div class="column header__column first">
                                 <a href="https://demo.wpzoom.com/inspiro-shop/" class="nav__logo"><h3>Inspiro</h3></a>
                             </div>
-                            <div class="column header__column">
+                            <div class="column header__column middle">
                                 <div class="nav__list visible-on-desktop">
                                     <ul>
                                         <li><a href="#" class="nav__element">Home</a></li> 
@@ -45,13 +45,52 @@
                                     </ul> 
                                 </div>
                             </div>
-                            <div class="column header__column">
+                            <div class="column header__column last">
                                 <div class="nav__list">
                                     <ul>
                                         <li><a href="#" class="nav__element"><i class="fa-solid fa-magnifying-glass"></i></a></li>
                                         <li><a href="#" class="nav__element"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                                        <li><a href="#" class="nav__element"><i class="fa-solid fa-bars"></i></a></li>
+                                        <li><a href="#" class="nav__element mobile-nav__burgericon"><i class="fa-solid fa-bars"></i></a></li>
                                     </ul>
+
+                                    <!-- adding the sidemenu here, that opens through the burgermenu-->
+                                    <div class="mobile-nav__sidebar"> <!--class="mobile-nav__sidebaractive" for mobile - class added through JavaScript-->
+                                        <div class="mobile-nav__closepanel">
+                                            <button class="mobile-nav__closebtn"><i class="fa-solid fa-xmark"></i></button>
+                                        </div>
+                                        <div class="menu menu--vertical">
+                                            <ul class="menu__list">
+                                                <li class="menu__element"><a class="menu__link" href="#"><h4>Search</h4></a>
+                                                    <form action="#" method="post" class="form">
+                                                        <input class="button newsletter__input" name="mail" required="" type="text" placeholder="Email address">
+                                                        <input class="button newsletter__button" type="submit" value="Subscribe">
+                                                    </form>
+                                                </li>
+                                                <li class="menu__element"><a class="menu__link" href="#"><h4>About</h4></a>
+                                                    <p>Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with real content. This is required when, for example, the final text is not yet available.</p>
+                                                </li>
+                                                <li class="menu__element menu__hasdropdown"><a class="menu__link" href="#"><h4>Categories</h4></a>
+                                                    <ul class="menu__dropdown">
+                                                        <li class="menu__element"><a class="menu__link" href="#">Camping Gear</a></li>
+                                                        <li class="menu__element"><a class="menu__link" href="#">Hiking Essentials</a></li>
+                                                        <li class="menu__element"><a class="menu__link" href="#">Outdoor Essentials</a></li>
+                                                        <li class="menu__element"><a class="menu__link" href="#">Rock Climbing Gear</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu__element"><a class="menu__link" href="#"><h4>Follow Us</h4></a>
+                                                    <div class="footer__iconcontainer">
+                                                        <a href="#" class="footer__icon"><i class="fa-brands fa-facebook"></i></a>
+                                                        <a href="#" class="footer__icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                                        <a href="#" class="footer__icon"><i class="fa-brands fa-youtube"></i></a>
+                                                        <a href="#" class="footer__icon"><i class="fa-brands fa-instagram"></i></a>
+                                                        <a href="#" class="footer__icon"><i class="fa-brands fa-linkedin"></i></a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                    <!--sidebar ends here-->
+
                                 </div>
                             </div>
                         <!--</nav>-->
@@ -648,6 +687,11 @@
                     </div>
                 </div>
             </div>
+            <div class="upbtn">
+                <span class="upbtn__chevron"><a href="#" class="arrow arrow--up"><i class="fa-solid fa-chevron-up"></i></a></span>
+            </div>
         </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!--jQuery library-->
+        <script src="./hiking-script.js"></script>
     </body>
 </html>
