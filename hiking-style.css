@@ -500,6 +500,10 @@ a{
 }
 .sale__button{
     margin-bottom: 30px;
+    padding: 0.7em 1em;
+    max-width: 120px;
+    white-space: nowrap;
+    font-size: min(18px, 4vw);
 }
 .product__container__small{
     /*width: 100%; /* let grid handle width */
