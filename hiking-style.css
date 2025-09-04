@@ -435,7 +435,7 @@ a{
     padding: 15px 30px;
 }
 
-/* sale section */
+/* sale section */ 
 .sale__row {
   display: grid;
   gap: 20px;
@@ -468,9 +468,8 @@ a{
     align-items: center;
     flex-direction: column;
     background-color:rgba(0, 0, 0, 0.25);
-
     justify-content: space-between;
-    padding: 15 px;
+    padding: 20px;
 }
 .sale__heading{
     text-align: center;
@@ -479,9 +478,15 @@ a{
     margin-bottom: 16px;
 }
 .sale__percentage{
-    padding: 10px 66px 6px;
-    margin-bottom: 230px;
+    padding: 10px 2px 6px;
+    margin-bottom: 105%;
     background-color: rgba(36, 33, 34, 0.84);
+    max-width: 90%;
+    width: 200px;
+    text-align: center;
+}
+.sale__button{
+    margin-bottom: 30px;
 }
 .product__container__small{
     /*width: 100%; /* let grid handle width */
