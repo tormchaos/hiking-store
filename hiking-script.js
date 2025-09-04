@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
 
-  // manipulating the nav bar background
+  // making the nav bar background appear
     jQuery(window).scroll(function () {
     let ourHeight = jQuery(this).scrollTop();
     console.log(ourHeight);
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
     });
 
-  // manipulating the up button
+  // manipulating the up button - making it appear and scroll up
   jQuery(window).scroll(function(){
     let ourHeight = $(this).scrollTop();
     console.log(ourHeight);
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     jQuery('body, html').animate({scrollTop:0},'fast');
   });
 
-  // burgermenu and sidebar here
+  // opening and closing the sidebar here - via burgermenu icon and close icon
   jQuery('.mobile-nav__burgericon').click(function(){ /* button is clicked */
     console.log('button is clicked');
     $('.mobile-nav__sidebar').addClass('mobile-nav__sidebaractive');

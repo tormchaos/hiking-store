@@ -325,6 +325,11 @@ a{
     padding: 1em 2em;
     display: inline-block;
 }
+.button:hover{
+    background-color: #eba12d;
+    border-color: #eba12d;
+    transition: 0.5s;
+}
 .stripe{
     width: 85px;
     height: 3px;
@@ -373,6 +378,11 @@ a{
     margin: 20px 0;
     align-self: flex-start;
 }
+.product__button:hover{
+    color: #eba12d;
+    background-color: #fff;
+    border-color: #eba12d;
+}
 .fa-arrow-right{
     font-size: 14px;
     padding-left: 6px;
@@ -412,6 +422,11 @@ a{
     border: none;
     padding: 0;
     font-weight: 500;
+}
+.activity__button:hover{
+    color: #eba12d;
+    background-color: transparent;
+    border: none;
 }
 .activity__centerbutton{
     text-align: center;
@@ -543,6 +558,11 @@ a{
     border: 0px;
     font-weight: 500;
 }
+.arrow__noborder__button:hover{
+    color: #eba12d;
+    background-color: #fff;
+    border-color: #eba12d;
+}
 .experience__row{
     padding-bottom: 60px;
     text-align: center;
@@ -574,6 +594,10 @@ a{
     color: #242122;
     font-size: 22px;
     margin-top: 20px;
+}
+.categories__name:hover{
+    color: #eba12d;
+    transition: 0.5s;
 }
 
 /* blog section */
@@ -619,6 +643,9 @@ a{
     padding: 15px 30px;
     margin-bottom: 120px;
     margin-top: 80px;
+}
+.blog__button:hover{
+    color: #fff;
 }
 
 /* newsletter section */
