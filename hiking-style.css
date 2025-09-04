@@ -136,6 +136,10 @@ a{
 .nav__element{
     font-size: 18px;
 }
+.nav__element:hover{
+    color: #aaa;
+    transition: 0.3s;
+}
 .visible-on-desktop{
     display: none;
 }
@@ -219,6 +223,10 @@ a{
 .menu__dropdown a{
     color: #eba12d;
 }
+.menu__dropdown a:hover{
+    color: #fff;
+    transition: 0.3s;
+}
 .menu__element h4{
     font-family: "Fjalla One", sans-serif;
     color: #fff;
@@ -233,6 +241,10 @@ a{
     right: 45px;
     font-size: 24px;
     cursor: pointer;
+}
+.mobile-nav__closebtn:hover{
+    color: #aaa;
+    transition: 0.3s;
 }
 
 /* main banner section */
