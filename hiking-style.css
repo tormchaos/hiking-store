@@ -138,7 +138,7 @@ a{
     font-size: 18px;
 }
 .nav__element:hover{
-    color: #aaa;
+    color: #b0b0b0;
     transition: 0.3s;
 }
 .visible-on-desktop{
@@ -150,7 +150,7 @@ a{
     transition: all 1.5s ease;
     position: absolute;
     z-index: 3;
-    top: 37px;
+    top: calc(100% + 20px);
     height: 0;
     overflow: hidden;
     text-align: center;
@@ -161,8 +161,21 @@ a{
 .nav__dropdown a{
     color: #b0b0b0;
 }
+.nav__dropdown a:hover{
+    color: #727272;
+}
 .nav__hasdropdown{
     position: relative;
+}
+.nav__hasdropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;     /* right under the parent */
+  left: -100%;
+  width: 300%;
+  height: 40px;  /* size of the gap you want */
+  background: transparent;
+  pointer-events: auto; /* makes it "hoverable" */
 }
 .nav__hasdropdown>a{
     position: relative;
@@ -856,6 +869,7 @@ footer p{
     }
     .blog__container__small{
         width: 85%;
+        justify-self: left;
     }
     .header__row{
         grid-template-columns: 1fr 2fr 1fr;
