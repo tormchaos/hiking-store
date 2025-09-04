@@ -109,12 +109,13 @@ a{
     padding: 0;
     display: grid;
     justify-items: center;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
 }
 .header__column{
     margin-top: 30px;
     margin-bottom: 20px;
+    padding: 0 5px;
 }
 .header__column.first{
     justify-self: start;
@@ -851,6 +852,9 @@ footer p{
     }
     .blog__container__small{
         width: 85%;
+    }
+    .header__row{
+        grid-template-columns: 1fr 2fr 1fr;
     }
 }
 
