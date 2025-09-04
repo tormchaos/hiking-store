@@ -479,7 +479,7 @@ a{
 }
 .sale__percentage{
     padding: 10px 2px 6px;
-    margin-bottom: 105%;
+    margin-bottom: 95%;
     background-color: rgba(36, 33, 34, 0.84);
     max-width: 90%;
     width: 200px;
@@ -691,6 +691,22 @@ input{
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 500;;
+    cursor: pointer;
+}
+.newsletter__button:hover{
+    background-color: #111;
+    transition: 0.5s;
+    border-color: #111;
+}
+.newsletter__input:hover{
+    color: #111;
+    background-color: #c9c9c9;
+    transition: 0.5s;
+}
+.newsletter__input:active{
+    color: #111;
+    background-color: #fff;
+    border-color: #eba12d;
 }
 
 /* site footer starts here */
@@ -832,12 +848,16 @@ footer p{
         grid-template-columns: repeat(5, 1fr);
         align-items: stretch;
     }
-    .sale__container:first-child {
-        grid-column: span 2; /* first promo spans 2 columns */
+    /*.sale__row > .column:first-child {
+        grid-column: span 2;
+        margin-right: 30px;
+        max-width: 290px;
     }
-    .sale__container:last-child {
-        grid-column: span 2; /* last promo spans 2 columns */
-    }
+    .sale__row > .column:last-child {
+        grid-column: span 2;
+        margin-left: 30px;
+        max-width: 290px;
+    }*/
     .experience__main{
         grid-column: 1 / span 1;
         padding-bottom: 0px;
@@ -878,13 +898,3 @@ footer p{
         margin-bottom: 20px;
     }
 }
-
-
-
-/* WHAT ELSE NEEDS TO BE DONE:
-
-add symbols where needed, nav bar, logo
-make the nav bar beautiful and properly functioning
-add sidebar for mobile use
-add burgermenu for mobile use
-*/
