@@ -1,10 +1,9 @@
 <!doctype html>
 
 <!-- TO FIX:
- kui teen lahti sidebari burgermenüüst, siis viskab kohe lehe algusesse, ei peaks
- sidebar peaks ära minema ka siis kui klikin sellest väljapoole, mitte ainult close nupust
- sidebaris newsletter asemel search
- tee image scroll tent banner sectionile javascriptiga
+ opening sidebar from burgermenu – shouldn't jump to the start of the page
+ sidebar should close when clicking outside of it, not just from the close btn
+ image scroll for hero and tent section
 -->
 
 <html>
@@ -68,7 +67,7 @@
                                         </div>
                                         <div class="menu menu--vertical">
                                             <ul class="menu__list">
-                                                <li class="menu__element"><h4>Search</h4>
+                                                <li class="menu__element"><h4>Join Our Newsletter</h4>
                                                     <form action="#" method="post" class="form">
                                                         <input class="button newsletter__input" name="mail" required="" type="text" placeholder="Email address">
                                                         <input class="button newsletter__button" type="submit" value="Subscribe">
@@ -113,9 +112,11 @@
             <!--main banner-again-using background image-->
            <section class="banner banner--main">
                 <div class="container">
-                    <h1 class="banner__heading">Gear up for unforgettable outdoor adventures</h1>
-                    <p class="banner__text">Embark on your next outdoor experience with our handpicked assortment of must-have hiking gear</p>
-                    <a href="#" class="button banner__button">Shop now</a>
+                    <div class="banner__textcontainer">
+                        <h1 class="banner__heading">Gear up for unforgettable outdoor adventures</h1>
+                        <p class="banner__text">Embark on your next outdoor experience with our handpicked assortment of must-have hiking gear</p>
+                        <a href="#" class="button banner__button">Shop now</a>
+                    </div>
                     <a href="#" class="arrow arrow--left"><i class="fa-solid fa-chevron-left"></i></a>
                     <a href="#" class="arrow arrow--right"><i class="fa-solid fa-chevron-right"></i></a>
                 </div>

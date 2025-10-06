@@ -276,10 +276,14 @@ a{
     display: grid;
     align-items: center;
 }
+.banner__textcontainer{
+    max-width: 270px;
+    margin: 10px 25px;
+}
 .banner h1{
-    max-width: 550px;
     margin: 40px auto;
-    line-height: 94px;
+    line-height: 1.4;
+    font-size: clamp(30px, 5vw, 72px);
 }
 .banner p{
     max-width: 550px;
@@ -825,6 +829,9 @@ footer p{
 }
 
 @media screen and (min-width: 610px){
+    .banner__textcontainer{
+        max-width: 400px;
+    }
     .product__row {
         grid-template-columns: repeat(2, 1fr);
         justify-items: start;
@@ -917,6 +924,9 @@ footer p{
 }
 
 @media screen and (min-width: 980px){
+    .banner__textcontainer{
+        max-width: 550px;
+    }
     .visible-on-desktop{
         display: block;
     }

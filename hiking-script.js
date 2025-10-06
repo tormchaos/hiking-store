@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     jQuery('body, html').animate({scrollTop:0},'fast');
   });
 
-  // opening and closing the sidebar here - via burgermenu icon and close icon
+  // opening and closing the sidebar - via burgermenu icon and close icon
   jQuery('.mobile-nav__burgericon').click(function(){ /* button is clicked */
     console.log('button is clicked');
     $('.mobile-nav__sidebar').addClass('mobile-nav__sidebaractive');
